@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/logo/logo2.png" />
+    <title>ZAIgo - Find The Shortest and Cheapest Way to Travel , Bus Flight Train Ticket Booking</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="signin.css">
+    <style>
+		@font-face
+		{
+			font-family: cholo;
+			src: url('fonts/CHOLO.ttf');
+		}
+		@font-face
+		{
+			font-family: myriad;
+			src: url('fonts/MyriadPro-Light.otf');
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="row hhead">
+		<nav class="navbar navbar-default">
+		    <div class="navbar-header">
+		    	<div class="tt col-lg-2"> <img src="images/logo/logo1.png"> </div>
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		    </div>
+		    <div class="navbar-collapse collapse">
+		        <ul class="nav nav-tabs nav-justified nav_bor">
+		            <li><a href="home.html"> <span class="glyphicon glyphicon-home"> Home </a></li>
+		            <li><a href="stod.html">S  <span class="glyphicon glyphicon-transfer"></span>  D</a></li>
+    				<li><a href="train.html"> <span class="glyphicon glyphicon-blackboard"></span> &nbsp;Train </a></li>
+    				<li><a href="flight.html"> <span class="glyphicon glyphicon-plane"></span>&nbsp; Flight </a></li>
+    				<li><a href="bus.html"> <span class="glyphicon glyphicon-bed"></span>&nbsp; Bus </a></li>
+		            <li class="active hm"><a href="signin.html"><span class="glyphicon glyphicon-user"></span> SignIn</a></li>
+		        </ul>
+		    </div>
+		</nav>
+	</div>
+
+	<div class="m_padding">
+		<div class="container">
+			<!--  Customer fill form for journey -->
+			<div class="mid-form mid-padding"> 
+				<form class="form-horizontal" method="post">
+    				<div class="form-group">
+    				    <div class="col-lg-12 col-xs-12 smm">
+    				    	<span style="font-size: 15px"> mail id / mobile number </span>
+    				        <input type="text" id="source" class="form-control" name="id" placeholder="Enter registered mail id or mobile no">
+    				    </div>
+    				    <div class="col-lg-12 col-xs-12">
+    				    	<span style="font-size: 15px"> password </span>
+    				        <input type="password" id="source" class="form-control" name="pass" placeholder="Enter your password">
+    				    </div>
+    				</div>
+    				<div class="form-group">
+    					<div class="col-lg-12">
+    	        			<div class="customDiv">
+    	            			<button class="btn btn-primary btn-block"><b> Submit </b></button>
+    	        			</div>
+    	        		</div>
+    	        	</div>
+    	        	<div class="form-group">
+    					<div class="col-lg-12">
+    						<div class="row new-user">
+    							Don't Have An Account ? <a href="register.html">REGISTER</a> Here
+    						</div>
+    					</div>
+    				</div>
+				</form>
+			</div>
+			<!--   ***************    -->
+			<div class="compare_price">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3> We Compare Best Price From 100+ Travel Sites In One Place </h3>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-6">
+						<div class="col-lg-4 col-xs-4">
+							<img src="images/logo/ixigo.png" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-4">
+							<img src="images/logo/make.jpg" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-4">
+							<img src="images/logo/redbus.jpg" class="img-responsive">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 col-lg-6">
+						<div class="col-lg-4 col-md-4 col-xs-4">
+							<img src="images/logo/cleartrip.jpg" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-4">
+							<img src="images/logo/goibibo.png" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-xs-4">
+							<img src="images/logo/jetairways.png" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+	    	<!--      services              -->
+	
+	    	<div class="our-services">
+	    		<div class="container">
+	    			<div class="row">
+	    				<p class="serv-class">Why Should You Choose Our Services ? </p>
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/save.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">Money Savings</p>
+						    	<p class="serv-details">We provide you all possible route to travel from source to destination.
+						    	We provide that in a sorted list based on the ticket price in various website.
+						    	You can pick easily minimum costly route.  </p>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/visibility.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">Find Least Time Route</p>
+						    	<p class="serv-details">We provide you all possible route to travel from source to destination.
+						    	We also provide that in a sorted list based on the travel time.
+						    	You can pick easily minimum time required route.  </p>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/24by7.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">24&times;7 Protective Support</p>
+						    	<p class="serv-details">Get solutions to travel issues quickly from our experts with chat, phone, and email
+						    	 support all on our exclusive mobile app and website.  </p>
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/choice.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">Indiawide Destination</p>
+						    	<p class="serv-details">You may choose any place to travel all over India.
+						    	 If flight , train or private bus services can reach there our site will find the best
+						    	 way to travel there .  </p>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/tech.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">Advanced Technology</p>
+						    	<p class="serv-details">We used latest and advanced technology to crawl data from other sites and 
+						    	 to store data in database. 
+						    	 We also modify our services as per customer recomendation.  </p>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="customDiv">
+						    	<img src="images/logo/satisfaction.svg" width="100px" height="100px" class="center">
+						    	<p class="serv-title">To Provide Satishfaction</p>
+						    	<p class="serv-details">Our motive is to provide you the cheapest and best service. 
+						    	 We are always active to serve you in case of any complain or issue raised. 
+						    	 Our goal is to serve you in a best possible manner. </p>
+						    </div>
+						</div>
+					</div>
+				</div>
+	    	</div>
+		</div>
+		<!--          footer         -->
+		<div class="lfooter">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<p div class="hfooter"> Our Services </p>
+					<div class="det-footer">
+						<ul>
+							<li> <a href="stod.html">Way To Destination </a> </li>
+							<li> <a href="train.html">Train Ticket Booking</a> </li>
+							<li> <a href="flight.html">Flight Ticket Booking</a> </li>
+							<li> <a href="bus.html">Bus Ticket Booking</a> </li>
+							<li> <a href="#">Carrier</a></li>
+							<li> Travelling Loan </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<p div class="hfooter"> Company </p>
+						<div class="det-footer">
+						<ul>
+							<li> <a href="#">About Us </a> </li>
+							<li> <a href="#">FAQs </a> </li>
+							<li> <a href="#">Contact Us</a> </li>
+							<li> <a href="#">Privacy</a> </li>
+							<li> <a href="#">Terms & Conditions</a></li>
+							<li> <a href="#">Blog</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<p div class="hfooter"> Travelling Loans </p>
+						<div class="det-footer">
+						<ul>
+							<li> <a href="#">ICICI Bank </a> </li>
+							<li> <a href="#">HDFS Bank </a> </li>
+							<li> <a href="#">Bajaj Finserv</a> </li>
+							<li> <a href="#">Tata Capital</a> </li>
+							<li> <a href="#">Bank Bazar</a></li>
+							<li> <a href="#">Qbera</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<p div class="hfooter"> Connect Us </p>
+					<div class="dete-footer">
+						<ul>
+							<li>Connect Us With Our Mobile app<br>
+								<a href="#"> <img src="images/logo/google_play.png" class="col-xs-10 col-xs-offset-1 img-responsive">  </a>
+							</li>
+							<li> <div class="row col-xs-12 my-padding">Also Connect Us With</div>
+								<div class="row">
+									<a href="#"><img src="images/logo/google.png" class="col-xs-3 img-responsive" title="Google+"> </a> 
+									<a href="#"><img src="images/logo/facebook.png" class="col-xs-3 col-lg-3 img-responsive" title="Facebook"> </a>
+									<a href="#"><img src="images/logo/twitter.png" class="col-xs-3 col-lg-3 img-responsive" title="Twitter"></a>
+									<a href="#"><img src="images/logo/youtube.png" class="col-xs-3 col-lg-3 img-responsive" title="Youtube"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="h-foot">
+					<p class="foott"> &copy 2018 - 2019 ZAIgo Inc. | All Rights Reserved | CST # 2130068-40 | 339, Hussainpur, Kolkata-39  </p>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js">		</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src=" jquery.js"> </script>
+	<script src="script.js"> </script>
+
+</html>

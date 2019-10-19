@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+{% load filters %}
+{% load static%}
+{% load staticfiles%}
+<html>
+
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static "images/logo/logo5.jpg"%}" >
+    <title>GoRaahi - Find The Shortest and Cheapest Way to Travel , Bus Flight Train Ticket Booking</title>
+    <link href="{% static "bootstrap/css/bootstrap.min.css"%}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static "css/stylesheet.css"%}">
+	<link type="text/css" rel="stylesheet" href="{% static "css/result.css"%}">
+    <style>
+		@font-face
+		{
+			font-family: cholo;
+			src: url('{% static "fonts/CHOLO.ttf"%}');
+		}
+		@font-face
+		{
+			font-family: myriad;
+			src: url('{% static "fonts/MyriadPro-Light.otf"%}');
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js"%}"></script>
+	<script type="text/javascript" src="{% static "javascript/jquery.js"%}"> </script>
+	<script type="text/javascript" src="{% static "javascript/script.js"%}"> </script>
+    <script type="text/javascript" src="{% static "javascript/active_class.js"%}"> </script>
+	<!-- date picker library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+
+</head>
+
+<body>
+	<div class="row hhead">
+		<nav class="navbar navbar-default">
+		    <div class="navbar-header">
+		    	<div class="tt col-lg-2"> <img src="{% static "images/logo/logo2.png"%}"> </div>
+		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		        </button>
+		    </div>
+		    <div class="navbar-collapse collapse">
+		        <ul class="nav nav-tabs nav-justified nav_bor">
+		            <li><a href="{%url 'basicapp:index'%}"> <span class="glyphicon glyphicon-home"> Home </a></li>
+		            <li><a href="{%url 'basicapp:stod'%}">S  <span class="glyphicon glyphicon-transfer"></span>  D</a></li>
+    				<li><a href="{%url 'basicapp:train'%}"> <span class="glyphicon glyphicon-blackboard"></span> &nbsp;Train </a></li>
+    				<li><a href="{%url 'basicapp:flight'%}"> <span class="glyphicon glyphicon-plane"></span>&nbsp; Flight </a></li>
+    				<li><a href="{%url 'basicapp:bus'%}"> <span class="glyphicon glyphicon-bed"></span>&nbsp; Bus </a></li>
+		            <li><a href="{%url 'basicapp:signin'%}"><span class="glyphicon glyphicon-user"></span> SignIn</a></li>
+		        </ul>
+		    </div>
+		</nav>
+	</div>
+
+  <div class="row form-det">
+      <div class="col-md-4">
+        From : &nbsp;&nbsp;{{source}}
+      </div>
+      <div class="col-md-4">
+        To : &nbsp; &nbsp;{{destination}}
+      </div>
+      <div class="col-md-4">
+        Deparature : &nbsp; &nbsp;{{date}}
+      </div>
+  </div>
+
+  <div class="container inn-margin">
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <div class="soto">
+          <div class="soto-wrr"> We Compare Different Websites To Show You The Best Result </div>
+          <div class="soto-wr"> Get the cheapest fare, shortest distance & quickest route for all modes of transportation.  </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <div class="soto soto-filter">
+          <form action="post" name="myform">
+             <select name="myoption" class="form-control"  onclick="func()">
+               <option value="cheapest">&nbsp; Cheapest &nbsp;</option>
+               <option value="shortest">&nbsp; Shortest &nbsp;</option>
+               <option value="quickest">&nbsp; Quickest &nbsp;</option>
+             </select>
+             <!--<div class="customDiv">
+                  <button type="submit" class="btn btn-primary btn-block"><b> Sort </b></button>
+              </div>-->
+           </form>
+           </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="tr-details">
+          <div class="row fix-padding">
+            <div class="col-lg-4 col-xs-4">
+              <img src="{% static "images/logo/plane.png"%}" class="img-responsive">
+            </div>
+            <div class="col-lg-8 col-xs-8 type-det"> Flight
+            </div>
+          </div>
+          {% with file_flight|split:"!"  as x %}
+          {% for y in x %}
+          {% with  y|split:"|" as r %}
+          <div class="box box-bs">
+			      <div class="fl-name row">   <img src="{% static "images/logo/flight_logo.png"%}" class="img-responsive col-lg-3"> {{r.0}} </div>
+            <!--<div class="al"> THU, 28 FEB </div>
+            <div class="al"> FRI, 29 FEB </div> -->
+            <div class="fl"> {{r.1}} </div>
+            <div class="my-row">
+            <div class="al"> {{r.2}} </div>
+            <div class="ml"> <img src="{% static "images/logo/clock.png"%}" class="img-responsive col-lg-3 cl-pad"> {{r.4}} </div>
+            <div class="al"> {{r.3}} </div>
+          </div>
+            <div class="cr-bs">
+              <div class="pl"> INR &nbsp; <span style="color: black; font-size: 20px; font-family: arial">{{r.5}} </span> </div>
+              <div class="crwl-name">
+                <img src="{% static "images/logo/ixigo_logo.png"%}" class="img-responsive">
+              </div>
+            </div>
+          </div>
+          {% endwith %}
+          {% endfor %}
+          {% endwith %}
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="tr-details">
+          <div class="row fix-padding">
+            <div class="col-lg-4 col-xs-4">
+              <img src="{% static "images/logo/train.png"%}" class="img-responsive">
+            </div>
+            <div class="col-lg-8 col-xs-8 type-det"> Train
+            </div>
+          </div>
+
+          <!-- -->
+          {% for x in file_train.trains %}
+          <div class="box box-bs">
+
+            <div class="fl-name row">   <img src="{% static "images/logo/train_logo.png"%}" class="img-responsive col-lg-3"> {{x.name}} {{x.number}}</div>
+            <div class="my-row">
+                <div class="cl-one"> {{x.from_station.name}} </div>
+                <div class="cl-one"> {{x.to_station.name}} </div>
+            </div>
+            <div class="my-row">
+                <div class="cl-two"> {{x.from_station.code}} </div>
+                <div class="cl-two"> {{x.to_station.code}} </div>
+            </div>
+
+            <div class="my-row">
+              <div class="al"> {{x.src_departure_time}} </div>
+              <div class="ml pad"> <img src="{% static "images/logo/clock.png"%}" class="img-responsive col-lg-4 cl-pad"> {{x.travel_time}} </div>
+              <div class="al"> {{x.dest_arrival_time}} </div>
+            </div>
+            <div class="my-row">
+            {% for y in x.classes %}
+              <div class="sel"> {{y.code}} </div>
+            {% endfor %}
+            </div>
+            <div class="cr-bs mypad">
+				<div class="spc-one"> AVAILABLE 250 </div>
+				<div class="spc-two"> INR &nbsp; <span style="color: black; font-size: 20px; font-family: arial"> 2100 </span> </div>
+				<div class="crwl-name">
+			  	<img src="{% static "images/logo/irctc_logo.png"%}" class="img-responsive">
+				</div>
+			</div>
+          </div>
+          {% endfor %}
+      </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="tr-details">
+          <div class="row fix-padding">
+            <div class="col-lg-4 col-xs-4">
+              <img src="{% static "images/logo/bus.png"%}" class="img-responsive">
+            </div>
+            <div class="col-lg-8 col-xs-8 type-det"> Bus
+            </div>
+          </div>
+          {% with file_bus|split:","  as x %}
+          {% for y in x %}
+          {% with  y|split:"|" as r %}
+          <div class="box box-bs">
+			      <div class="fl-name row">   <img src="{% static "images/logo/images_bus.png"%}" class="img-responsive col-lg-3"> {{r.0}} </div>
+            <div class="fl"> {{r.1}} </div>
+            <!--<div class="al"> THU, 28 FEB </div>
+            <div class="al"> FRI, 29 FEB </div> -->
+            <div class="al"> <span style="padding-right: 30px;"> {{r.2}} </div>
+            <div class="ml"> <img src="{% static "images/logo/clock.png"%}" class="img-responsive col-lg-3 cl-pad"> {{r.4}} </div>
+            <div class="al"> {{r.3}} </div>
+            <div class="cr-bs">
+              <div class="pl"> INR &nbsp; <span style="color: black; font-size: 20px; font-family: arial">{{r.5}} </span> </div>
+              <div class="crwl-name">
+                <img src="{% static "images/logo/Redbus_logo.jpg"%}" class="img-responsive">
+              </div>
+            </div>
+          </div>
+          {% endwith %}
+          {% endfor %}
+          {% endwith %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--          footer         -->
+  <div class="lfooter">
+  	<div class="row">
+  		<div class="col-md-3 col-sm-6">
+  			<p div class="hfooter"> Our Services </p>
+  			<div class="det-footer">
+  				<ul>
+  					<li> <a href="{%url 'basicapp:stod'%}">Way To Destination </a> </li>
+  					<li> <a href="{%url 'basicapp:train'%}">Train Ticket Booking</a> </li>
+  					<li> <a href="{%url 'basicapp:flight'%}">Flight Ticket Booking</a> </li>
+  					<li> <a href="{%url 'basicapp:bus'%}">Bus Ticket Booking</a> </li>
+  					<li> <a href="#">Carrier</a></li>
+  					<li> Travelling Loan </li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+  			<p div class="hfooter"> Company </p>
+  				<div class="det-footer">
+  				<ul>
+  					<li> <a href="#">About Us </a> </li>
+  					<li> <a href="#">FAQs </a> </li>
+  					<li> <a href="#">Contact Us</a> </li>
+  					<li> <a href="#">Privacy</a> </li>
+  					<li> <a href="#">Terms & Conditions</a></li>
+  					<li> <a href="#">Blog</a> </li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+  			<p div class="hfooter"> Travelling Loans </p>
+  				<div class="det-footer">
+  				<ul>
+  					<li> <a href="#">ICICI Bank </a> </li>
+  					<li> <a href="#">HDFS Bank </a> </li>
+  					<li> <a href="#">Bajaj Finserv</a> </li>
+  					<li> <a href="#">Tata Capital</a> </li>
+  					<li> <a href="#">Bank Bazar</a></li>
+  					<li> <a href="#">Qbera</a></li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="col-md-3 col-sm-6">
+  			<p div class="hfooter"> Connect Us </p>
+  			<div class="dete-footer">
+  				<ul>
+  					<li>Connect Us With Our Mobile app<br>
+  						<a href="#"> <img src="{% static "images/logo/google_play.png"%}" class="col-xs-10 col-xs-offset-1 img-responsive">  </a>
+  					</li>
+  					<li> <div class="row col-xs-12 my-padding">Also Connect Us With</div>
+  						<div class="row">
+  							<a href="#"><img src="{% static "images/logo/google.png"%}" class="col-xs-3 img-responsive" title="Google+"> </a>
+  							<a href="#"><img src="{% static "images/logo/facebook.png"%}" class="col-xs-3 col-lg-3 img-responsive" title="Facebook"> </a>
+  							<a href="#"><img src="{% static "images/logo/twitter.png"%}" class="col-xs-3 col-lg-3 img-responsive" title="Twitter"></a>
+  							<a href="#"><img src="{% static "images/logo/youtube.png"%}" class="col-xs-3 col-lg-3 img-responsive" title="Youtube"></a>
+  						</div>
+  					</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="h-foot">
+  			<p class="foott"> &copy 2018 - 2019 ZAIgo Inc. | All Rights Reserved | CST # 2130068-40 | 339, Hussainpur, Kolkata-39  </p>
+  	</div>
+  </div>
+
+  </div>
+  </body>
+
+  </html>

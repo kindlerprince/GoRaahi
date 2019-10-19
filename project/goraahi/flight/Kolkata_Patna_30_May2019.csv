@@ -1,0 +1,5 @@
+Flight_Name  ,Departure_Time  ,Arrival_Time  ,Duration  ,Fare
+IndiGo|IndiGo6E688|21:00|22:10| 1hr 10min     non-stop  |1826
+IndiGo|IndiGo6E633|18:30|19:45| 1hr 15min     non-stop  |2199
+IndiGo|IndiGo6E339|08:30|09:35| 1hr 5min     non-stop  |2413
+IndiGo|IndiGo6E811|11:35|12:55| 1hr 20min     non-stop  |2413

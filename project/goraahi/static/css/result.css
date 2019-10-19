@@ -1,0 +1,267 @@
+body{
+	background: url(../images/WhiteHouse-Faded.jpg) no-repeat;
+}
+
+.navbar-default {
+	background-color: rgba(0,0,0,0.9);
+}
+
+.dete-footer ul li{
+  color: white;
+}
+
+.inn-margin{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.form-det{
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  color: black;
+  padding: 15px;
+  background-color: #EEEEEE;
+  border: 0px solid #777777;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #888888;
+}
+
+.soto{
+  margin-bottom: 40px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid rgba(0,0,0,.3);
+  background: #FFF;
+  box-shadow: 0 0 5px rgba(0,0,0,.35);
+}
+
+.soto-wrr{
+	padding: 7px;
+	padding-bottom: 0px;
+}
+
+.soto-wr{
+  color: #FF0000;
+	font-size: 17px;
+  font-family: helvetica;
+  padding: 7px;
+	padding-top: 0px;
+}
+
+.soto-filter{
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+	padding-bottom: 6px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.customDiv{
+  padding: 0px;
+	padding-top: 10px;
+}
+
+.btn-primary {
+	background-color: #2196F3;
+	border-color: #2196F3;
+}
+
+.btn-primary:hover{
+  background-color: #005FAB;
+  border-color: #005FAB;
+}
+
+.tr-details{
+  padding: 10px;
+  padding-top: 25px;
+  border: 1px solid rgba(0,0,0,.25);
+  background: linear-gradient(to right,#EEEEEE 80%, #FFFFFF);
+  box-shadow: 0 0 5px rgba(0,0,0,.28);
+  height: auto;
+
+}
+
+.type-det{
+  padding-top: 12px;
+  padding-left: 10px;
+  font-size: 50px;
+}
+
+.fix-padding{
+  padding-bottom: 30px;
+}
+
+.box{
+  font-weight: normal;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  border-radius: 2px;
+  color: #333333;
+}
+
+.box-bs{
+	//background: linear-gradient(to left, #DEDEDE , #FFFFFF, #DEDEDE);
+	background-color: white;
+  border: 1px solid #DEDEDE;
+  box-shadow: 1px 1px 3px #333333;
+}
+
+.fl-name{
+	font-family: Arial;
+  font-size: 20px;
+	text-shadow: 1px 1px black;
+  color: #333333;
+  padding-bottom: 5px;
+  font-weight: bolder;
+}
+
+.al{
+	height: 120%;
+  width: 18%;
+	padding-top: 3px;
+	text-align: center;
+	padding-right: 20px;
+	font-size: 18px;
+	font-family: arial;
+	color: black;
+  display: inline-block;
+}
+
+.ml{
+  width: 60%;
+	padding-top: 0px;
+	font-family: arial;
+	color: #444444;
+	font-size: 14px;
+  display: inline-block;
+}
+
+.pad{
+	padding-left: 40px;
+}
+
+.cl-pad{
+	padding-top: 0px;
+	padding-right: 3px;
+	margin-right: 0px;
+}
+
+.fl{
+  	width: 100%;
+	font-weight: bold;
+	color: #777777;
+  	display: block;
+}
+
+.cl-one{
+  	width: 48%;
+	font-weight: bold;
+	color: #515151;
+  	display: inline-block;
+	font-size: 14px;
+	text-align: left;
+}
+
+.cl-two{
+  	width: 48%;
+	font-weight: bold;
+	color: #777777;
+  	display: inline-block;
+	font-size: 12px;
+	text-align: left;
+}
+
+.my-row{
+	display: inline;
+	padding: 2px;
+}
+
+.sl{
+  width: 32%;
+  display: inline-block;
+}
+
+.pl{
+	width: 72%;
+	text-align: right;
+	vertical-align: text-bottom;
+	padding-right: 13%;
+	padding-top: 5px;
+	display: inline-block;
+}
+
+.sel{
+	width : 11%;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #414141;
+	display: inline-block;
+	background-color: white;
+	border: 1px solid #24A0ED;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+}
+
+.active-class{
+	background-color: #24A0ED;
+	border: 2px solid white;
+	color: white;
+}
+
+/*.sel_d{
+	width : 15%;
+	text-align: center;
+	font-size: 13px;
+	font-family: myriad;
+	font-weight: bold;
+	color: #444444;
+	margin-right: 2px;
+	display: inline-block;
+}*/
+
+.crwl-name{
+	width: 25%;
+	display: inline-block;
+	float: right;
+  //padding-left: 25%;
+}
+
+.spc-one{
+	position: relative;
+	top : -2px;
+	width: 35%;
+	font-weight: bolder;
+	color: #717171;
+	text-align: right;
+	font-size: 13px;
+	vertical-align: text-bottom;
+	padding-right: 7%;
+	display: inline-block;
+}
+
+.spc-two{
+	width: 35%;
+	text-align: right;
+	vertical-align: text-bottom;
+	padding-right: 7%;
+	display: inline-block;
+	padding-top: 2px;
+}
+
+.cr-bs{
+	display: inline-block;
+}

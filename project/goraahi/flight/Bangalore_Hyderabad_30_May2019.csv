@@ -1,0 +1,16 @@
+Flight_Name  ,Departure_Time  ,Arrival_Time  ,Duration  ,Fare
+AirAsia India|AirAsia IndiaI51582|05:35|06:35| 1hr      non-stop  |2184
+AirAsia India|AirAsia IndiaI51576|07:35|08:50| 1hr 15min     non-stop  |2184
+AirAsia India|AirAsia IndiaI51516|14:25|15:35| 1hr 10min     non-stop  |2483
+AirAsia India|AirAsia IndiaI5515|13:25|14:45| 1hr 20min     non-stop  |2483
+IndiGo|IndiGo6E262|12:10|13:15| 1hr 5min     non-stop  |2721
+IndiGo|IndiGo6E266|06:15|07:25| 1hr 10min     non-stop  |2721
+IndiGo|IndiGo6E328|08:20|09:30| 1hr 10min     non-stop  |2721
+Air India|Air IndiaAI516|08:15|09:15| 1hr      non-stop  |3160
+IndiGo|IndiGo6E526|10:10|11:20| 1hr 10min     non-stop  |3087
+SpiceJet|SpiceJetSG1063|09:00|10:10| 1hr 10min     non-stop  |3108
+Go Air|Go AirG8294|18:45|20:05| 1hr 20min     non-stop  |3165
+IndiGo|IndiGo6E149|20:40|21:50| 1hr 10min     non-stop  |3205
+IndiGo|IndiGo6E855|18:50|20:10| 1hr 20min     non-stop  |3205
+IndiGo|IndiGo6E638|17:45|19:05| 1hr 20min     non-stop  |3205
+IndiGo|IndiGo6E258, 6E6173|13:35|18:40| 5hr 5min      1 stop  |3280

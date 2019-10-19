@@ -1,0 +1,16 @@
+Flight_Name  ,Departure_Time  ,Arrival_Time  ,Duration  ,Fare
+Go Air|Go AirG82501|02:40|04:55| 2hr 15min     non-stop  |3630
+IndiGo|IndiGo6E171|04:50|07:10| 2hr 20min     non-stop  |3795
+IndiGo|IndiGo6E181|09:25|11:45| 2hr 20min     non-stop  |3795
+SpiceJet|SpiceJetSG8723|08:30|10:35| 2hr 5min     non-stop  |3794
+Go Air|Go AirG8544|22:45|01:00| 2hr 15min     non-stop  |4075
+IndiGo|IndiGo6E129|17:30|19:40| 2hr 10min     non-stop  |4095
+IndiGo|IndiGo6E155|22:30|00:45| 2hr 15min     non-stop  |4095
+IndiGo|IndiGo6E665|21:30|23:50| 2hr 20min     non-stop  |4095
+Air India|Air IndiaAI191|21:00|23:10| 2hr 10min     non-stop  |4099
+IndiGo|IndiGo6E189|15:00|17:10| 2hr 10min     non-stop  |4208
+SpiceJet|SpiceJetSG169|19:45|22:05| 2hr 20min     non-stop  |4266
+SpiceJet|SpiceJetSG159|21:35|23:55| 2hr 20min     non-stop  |4266
+SpiceJet|SpiceJetSG153|06:10|08:30| 2hr 20min     non-stop  |4266
+IndiGo|IndiGo6E179|08:30|10:40| 2hr 10min     non-stop  |4413
+IndiGo|IndiGo6E2212|05:35|07:45| 2hr 10min     non-stop  |4413
