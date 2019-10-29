@@ -1,6 +1,6 @@
 # Web Integrated Transport Support System  
->read the the report file to get the clarity about the software  
-it requires the multinode hadoop cluster and spark with hdfs properly
+>Read the the Report.pdf file to get the clarity about the software  
+It requires the multinode hadoop cluster and spark with hdfs properly
 configured to  
 > Also set the evironment variables in bashrc file properly  
 **The user name of all the cluster must be same** _but hostnames are different_  
@@ -18,8 +18,8 @@ configured to
 
 ## Install Django
 
-#### setting virutal environment
-- follow this link to create virtual environment [Virtual Env](
+#### Setting virutal environment
+- Follow this link to create virtual environment [Virtual Env](
 https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-up-a-development-environment-on-ubuntu-16-04)
 - **Installing pip**  
 `$ sudo apt-get install python3-pip`  
@@ -29,8 +29,8 @@ https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-u
 - **Installing selenium Web Driver**  
 `$ pip3 install selenium`
 - **Download ChromeDriver**  
-`wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip`  
-`unzip chromedriver_linux64.zip`  
+`$ wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip`  
+`$ unzip chromedriver_linux64.zip`  
 You have to set this path properly in crawling
 - **Installing Beautiful Soup**  
 `$ pip3 install beautifulsoup4`  
@@ -55,20 +55,20 @@ You have to set this path properly in crawling
  `$ sudo apt-get install oracle-java8-installer`
 * **Confgure SSH**
  - Install open SSH server-client  
- `$ sudo apt-get install openssh-server openssh-client`
+ `$ sudo apt-get install openssh-server openssh-client`  
  `$ sudo apt-get install rsync`    
- - Generate Key Pairs
+ - Generate Key Pairs  
  `$ ssh-keygen -t rsa -P ""`  
  - Configure passwordless SSH  
  copy the content of .ssh/id_rsa.pub(of master) to .ssh/authorized_keys(of all the slaves as well as  master)  
  - Check by SSH to all the slaves
-  1. ssh slave01
-  2. ssh slave02
-  3. ssh slave03  
+    1. ssh slave01
+    2. ssh slave02
+    3. ssh slave03  
 
 ## Install Apache Hadoop
 * **Download Hadoop**  
-`wget -c https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz`  
+`$ wget -c https://archive.apache.org/dist/hadoop/core/hadoop-2.6.0/hadoop-2.6.0.tar.gz`  
 * **Extract the tar file**  
 `$ sudo tar -zxvf hadoop-2.6.0.tar.gz`  
 * **move the hadoop directory to /usr/local/hadoop**  
@@ -123,9 +123,9 @@ Edit configuration file slaves (located in HADOOP_HOME/etc/hadoop) and add follo
 - `$ sudo mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode`  
 - `$ sudo mkdir -p /usr/local/hadoop/hadoop_data/hdfs/datanode`  
 - `$ sudo chown user:user -R /usr/local/hadoop/`  
-- format the namenode  
+- **format the namenode**  
 `$ hdfs namenode -format`  
-- start all the daemons   
+- **start all the daemons**   
 `$ start-all.sh`
 
 ## Install Spark
