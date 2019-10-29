@@ -1,0 +1,8 @@
+# hadoopmaster is the master IP in /etc/hosts change it accordingly
+<configuration>
+<property>
+	<name>mapred.job.tracker</name>
+	<value>hadoopmaster:54311</value>
+</property>
+
+</configuration>

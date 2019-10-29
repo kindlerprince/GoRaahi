@@ -1,0 +1,25 @@
+# hadoopmaster is the master IP in /etc/hosts change it accordingly
+<property>
+<name>hbase.rootdir</name>
+<value>/usr/local/hbase-2.1.0/hbasestorage</value>
+</property>
+
+<property>
+<name>hbase.zookeeper.quorum</name>
+<value>localhost</value>
+</property>
+
+<property>
+<name>hbase.cluster.distributed</name>
+<value>true</value>
+</property>
+
+<property>
+<name>hbase.zookeeper.property.dataDir</name>
+<value>/usr/local/hbase-2.1.0/hbasestorage/zookeeper</value>
+</property>
+
+<property>
+<name>hbase.zookeeper.property.clientPort</name>
+<value>2181</value>
+</property>
